@@ -1,13 +1,28 @@
 
 body {
 	font-family: Arial, Helvetica, sans-serif;
-	background-color: #d4d4d4;
+	background-color: #ddd;
 	margin: 0px;
+	background-image:
+		linear-gradient(45deg, #d4d4d4 25%, transparent 25%),
+		linear-gradient(-45deg, #d4d4d4 25%, transparent 25%),
+		linear-gradient(45deg, transparent 75%, #d4d4d4 75%),
+		linear-gradient(-45deg, transparent 75%, #d4d4d4 75%);
+	background-size: 40px 40px;
+	background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
 }
 
 .content a {
 	color: #4a4;
 	text-decoration: none;
+}
+
+code {
+	background-color: #eee;
+	padding: 2px 8px;
+	border-radius: 5px;
+	border: 1px #ddd solid;
+	line-height: 24px;
 }
 
 header {
@@ -18,9 +33,15 @@ header {
 }
 
 footer {
-	height: 100px;
-	padding: 16px 15%;
-	background-color: ghostwhite;
+	text-align: center;
+	margin: 24px 0px;
+}
+
+footer span {
+	background: #eee;
+	padding: 5px 16px;
+	border-radius: 8px;
+	border: 1px #aaa solid;
 }
 
 h1 {
@@ -30,28 +51,20 @@ h1 {
 }
 
 h2 {
-	text-align: center;
 	padding: 12px 0px;
-	font-size: 1.8em;
+	font-size: 1.4em;
 	color: #101820;
-	border-top: 2px #d4d4d4 solid;
 }
 
 h3 {
 	padding: 12px 0px 6px 0px;
-	font-size: 1.5em;
+	font-size: 1.1em;
 	color: #333;
 }
 
-h4 {
-	padding: 6px 0px;
-	color: #555;
-	font-size: 1.25em;
-}
-
 .contact-information {
-	font-family: 'Courier New', Courier, monospace;
-	font-size: 0.75em;
+	/**font-family: 'Courier New', Courier, monospace;**/
+	font-size: 0.9em;
 }
 
 .navigation {
@@ -81,7 +94,7 @@ ul.main-nav li {
 }
 
 ul.main-nav li.active {
-	border-bottom: #101820 5px solid;
+	border-bottom: #3b3 5px solid;
 }
 
 ul.main-nav li > a {
@@ -94,6 +107,10 @@ ul.main-nav li > a {
 
 ul.main-nav li > a:hover {
 	background-color: #4b4;
+}
+
+ul.main-nav li:not(.dropdown) > a:hover {
+	border-bottom: #4b4 5px solid;
 }
 
 .secondary-nav {
