@@ -81,7 +81,7 @@ ul.main-nav li {
 }
 
 ul.main-nav li.active {
-	border-bottom: #101820 4px solid;
+	border-bottom: #101820 5px solid;
 }
 
 ul.main-nav li > a {
