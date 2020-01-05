@@ -4,8 +4,16 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="public/css/main.css"/>
+		
+		<script src="public/js/popup.js"></script>
 	</head>
 	<body>
+		
+		<div class="popup">
+			<span class="exit">&Cross;</span>
+			<div class="popup-content"></div>
+		</div>
+			
 		<header>
 			Header
 		</header>
@@ -76,8 +84,55 @@
 					<code>MyFunction(x) = 2 x ^ 3</code> will create a new function that all other
 					entry boxes can now use, so typing in a new entry box
 					<code>MyFunction(sin(x))</code> would produce a new graph that looks like
-					this <code>2 (sin(x)) ^ 3</code>
+					this <code>2 (sin(x)) ^ 3</code>. During the time Desmos has not implemented
+					their version of custom functions. As of right now, Desmos' custom function
+					feature is limited to only a single letter such as
+					<code>f(x) = x + 1</code> and <code>g(a, b, t) = a + t (b - a)</code>, however
+					it is more robust by implementing piecewise functions, setting the range
+					of the variables going into the function, and multiple variables.
 				</p>
+				
+				<h3>Images</h3>
+				
+				<div class="project-images">
+					<a href="public/images/opengraph1.jpg">
+						<img
+							src="public/images/opengraph1.jpg"
+							alt="Open Graphing Calculator graphing x cubed"
+						/>
+					</a>
+					<a href="public/images/opengraph3.jpg">
+						<img
+							src="public/images/opengraph3.jpg"
+							alt="Open Graphing Calculator graphing sine x squared and x squared"
+						/>
+					</a>
+					<a href="public/images/opengraph2.jpg">
+						<img
+							src="public/images/opengraph2.jpg"
+							alt="Open Graphing Calculator graphing x squared, sine squared x, and riemann's sums"
+						/>
+					</a>
+					<a href="public/images/opengraph4.gif">
+						<img
+							src="public/images/opengraph4.gif"
+							alt="An animated demonstration of how the circle geometry works"
+						/>
+					</a>
+					<a href="public/images/opengraph5.gif">
+						<img
+							src="public/images/opengraph5.gif"
+							alt="An animated demonstration of how the custom functions work"
+						/>
+					</a>
+				</div>
+				
+				<h3>Links</h3>
+				
+				<ul class="project-links">
+					<li><a href="http://www.opengraphingcalculator.com/">Start Graphing</a></li>
+					<li><a href="https://www.desmos.com/">Inspiration to create project (Desmos)</a></li>
+				</ul>
 				
 			</div>
 			
@@ -101,8 +156,8 @@
 				<h3>Links</h3>
 				
 				<ul class="project-links">
-					<li><a href="javascript:void(0);">Download in the Play Store.</a></li>
-					<li><a href="projects/ithrowrock.html">Play the game.</a></li>
+					<li><a href="javascript:void(0);">Download in the Play Store</a></li>
+					<li><a href="projects/ithrowrock.html">Play the game</a></li>
 				</ul>
 				
 			</div>

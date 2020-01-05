@@ -12,9 +12,40 @@ body {
 	background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
 }
 
+.popup {
+	display: none;
+	position: fixed;
+	width: 98%;
+	height: 98%;
+	margin: 1% 1%;
+	background: #eee;
+	z-index: 2;
+	overflow: hidden;
+	border: 1px #aaa solid;
+}
+
+.popup span.exit {
+	float: right;
+	padding: 8px 16px;
+	margin: 4px;
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 1.5em;
+}
+
+.popup span.exit:hover {
+	background-color: tomato;
+	cursor: pointer;
+}
+
 .content a {
 	color: #4a4;
 	text-decoration: none;
+}
+
+.content img {
+	width: 100%;
+	cursor: pointer;
+	padding: 8px 0px;
 }
 
 code {
