@@ -140,7 +140,7 @@ ul.main-nav li > a:hover {
 	background-color: #4b4;
 }
 
-ul.main-nav li:not(.dropdown) > a:hover {
+ul.main-nav li:not(.dropdown):not(.active) > a:hover {
 	border-bottom: #4b4 5px solid;
 }
 
