@@ -43,9 +43,15 @@ body {
 }
 
 .content img {
-	width: 100%;
+	width: 45%;
+	max-width: 480px;
+	float: left;
 	cursor: pointer;
-	padding: 8px 0px;
+	padding: 8px 16px;
+}
+
+.project-images {
+	overflow: hidden;
 }
 
 code {
@@ -171,7 +177,7 @@ ul.main-nav li:not(.dropdown):not(.active) > a:hover {
 
 /** Small Screen **/
 
-@media(max-width: 512px) {
+@media(max-width: 720px) {
 	
 	.content {
 		margin: 2% 5%;
@@ -211,5 +217,12 @@ ul.main-nav li:not(.dropdown):not(.active) > a:hover {
 	.secondary-nav a {
 		border-top: black 1px solid;
 		text-align: center;
+	}
+	
+	.content img {
+		display: inline-block;
+		width: 80%;
+		margin: 0% 10%;
+		float: none;
 	}
 }
