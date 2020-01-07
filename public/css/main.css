@@ -141,6 +141,10 @@ ul.main-nav {
 	background-color: #555;
 }
 
+ul.main-nav.no-active li {
+	border-bottom: #555 5px solid;
+}
+
 ul.main-nav li {
 	float: left;
 }
@@ -161,7 +165,11 @@ ul.main-nav li > a:hover {
 	background-color: #4b4;
 }
 
-ul.main-nav li:not(.dropdown):not(.active) > a:hover {
+ul.main-nav:not(.no-active) li:not(.dropdown):not(.active) > a:hover {
+	border-bottom: #4b4 5px solid;
+}
+
+ul.main-nav.no-active li:not(.dropdown):hover {
 	border-bottom: #4b4 5px solid;
 }
 
