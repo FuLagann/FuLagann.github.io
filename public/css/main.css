@@ -50,6 +50,11 @@ body {
 	padding: 8px 16px;
 }
 
+.content iframe.video {
+	width: 512px;
+	height: 320px;
+}
+
 .project-images {
 	overflow: hidden;
 }
@@ -224,5 +229,9 @@ ul.main-nav li:not(.dropdown):not(.active) > a:hover {
 		width: 80%;
 		margin: 0% 10%;
 		float: none;
+	}
+	
+	.content iframe.video {
+		width: 80%;
 	}
 }
