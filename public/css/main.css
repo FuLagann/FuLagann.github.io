@@ -12,6 +12,16 @@ body {
 	background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
 }
 
+.input-table span {
+	display: inline-block;
+	width: 20%;
+	line-height: 1.4em;
+}
+
+.input-table input {
+	margin: 0.4em 0px;
+}
+
 .popup {
 	display: none;
 	position: fixed;
@@ -233,5 +243,19 @@ ul.main-nav li:not(.dropdown):not(.active) > a:hover {
 	
 	.content iframe.video {
 		width: 80%;
+	}
+	
+	canvas {
+		width: 90%;
+	}
+	
+	.input-table span {
+		display: block;
+		width: 100%;
+		line-height: initial;
+	}
+	
+	.input-table input {
+		margin: 0.4em 0px;
 	}
 }
