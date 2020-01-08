@@ -21,11 +21,16 @@
 	
 	<body>
 		<div class="toolbar">
-			<div class="back" onclick="location.assign('../products.html#game-jam');">&lt; Back</div>
+			<span class="back" onclick="location.assign('../products.html#game-jam');">&Lt; Back</span>
+			<span class="how-to-play" onclick="location.reload();">How to Play</span>
 		</div>
 		
 		<div class="content">
 			<h1>Car Schmup</h1>
+			
+			<p class="description">
+				
+			</p>
 			
 			<h2>How to Play</h2>
 			
@@ -38,11 +43,28 @@
 				<kbd>Mouse Click</kbd> - Shoot pellets (Holding down will shoot continuously)
 			</p>
 			
+			<p class="description">
+				<img src="../public/assets/csmuga/powerup.png" alt="powerup" class="thumbnail"/>
+				- A powerup that will improve your rate of fire or give you another life to use
+				
+				<br/><br/>
+				
+				<img
+					src="../public/assets/csmuga/purple_car.png"
+					alt="player's car"
+					class="thumbnail"
+					style="height:36px;"
+				/>
+				- The purple car is the player's car
+				
+				<br/><br/>
+			</p>
+			
 			<div class="buttons">
 				<span class="btn btn-ok" onclick="startGame();">Continue to Game</span>
 			</div>
 		</div>
 		
-		<canvas id="cvs" width="100%" height="100%"></canvas>
+		<canvas id="cvs" width="100%" height="100%" style="display:block;margin:0px auto;"></canvas>
 	</body>
 </html>
