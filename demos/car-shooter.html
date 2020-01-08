@@ -9,15 +9,38 @@
 		<script src="../public/js/timer.js"></script>
 		<script src="../public/assets/csmuga/csmuga.js"></script>
 		<script>
-			window.addEventListener("load", function() {
-				//carshmup.runGame();
-			});
+			function startGame() {
+				// Variables
+				let content = document.getElementsByClassName("content")[0];
+				
+				content.style.display = "none";
+				carshmup.runGame();
+			}
 		</script>
 	</head>
 	
 	<body>
 		<div class="toolbar">
-			<div class="back" onclick="location.assign('../products.html');">&lt; Back</div>
+			<div class="back" onclick="location.assign('../products.html#game-jam');">&lt; Back</div>
+		</div>
+		
+		<div class="content">
+			<h1>Car Schmup</h1>
+			
+			<h2>How to Play</h2>
+			
+			<p class="description">
+				<kbd>w</kbd>, <kbd>a</kbd>, <kbd>s</kbd>, <kbd>d</kbd>
+				- Move around the car (up, left, down, right respectively)
+				
+				<br/><br/>
+				
+				<kbd>Mouse Click</kbd> - Shoot pellets (Holding down will shoot continuously)
+			</p>
+			
+			<div class="buttons">
+				<span class="btn btn-ok" onclick="startGame();">Continue to Game</span>
+			</div>
 		</div>
 		
 		<canvas id="cvs" width="100%" height="100%"></canvas>
