@@ -6,16 +6,20 @@
 		<title>Bang Bang Pew Pew</title>
 		
 		<link rel="stylesheet" type="text/css" href="../public/css/main.css"/>
-	</head>
-	
-	<body>
-		<div class="overlay" onclick="location.assign('../products.html#game-jam');">&lt; Back</div>
-		
-		<canvas id="cvs"></canvas>
 		<script src="../public/js/timer.js"></script>
 		<script src="../public/assets/csmuga/csmuga.js"></script>
 		<script>
-			carshmup.runGame();
+			window.addEventListener("load", function() {
+				//carshmup.runGame();
+			});
 		</script>
+	</head>
+	
+	<body>
+		<div class="toolbar">
+			<div class="back" onclick="location.assign('../products.html');">&lt; Back</div>
+		</div>
+		
+		<canvas id="cvs" width="100%" height="100%"></canvas>
 	</body>
 </html>
