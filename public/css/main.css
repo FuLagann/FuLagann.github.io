@@ -237,6 +237,7 @@ ul.main-nav.no-active li:not(.dropdown):hover {
 .buttons {
 	display: block;
 	text-align: right;
+	margin: 1em;
 }
 
 span.btn {
