@@ -303,8 +303,7 @@ But he is still working on it and hopefully this channel will actually post regu
 					contain within the engine to allow users to switch between graphic libraries.
 					Because I am still working on the mathematics, there is nothing in the <code>master</code>
 					branch of the repository of the engine; but there is code working on the <code>develop</code>
-					branch. As more modules are completed, I will start spreading the word to
-					ask for contributions.
+					branch.
 				</p>
 				
 				<h3>Links</h3>
@@ -316,6 +315,43 @@ But he is still working on it and hopefully this channel will actually post regu
 			
 			<div class="project">
 				<a name="paml"><h2>PAML</h2></a>
+				
+				<p class="description">
+					PAML is an acronym for Paul's Assistive Mathematics Library, and was originally
+					intended for a supplementary library. A professor asked for me to create a web
+					app to help students understand the
+					<a href="https://en.wikipedia.org/wiki/Method_of_undetermined_coefficients">methods
+					of undetermined coefficient</a> problem in differential equations. So I worked on
+					a prototype, and his response was "What if I want to do these equations in terms of
+					Y instead of X?" And I started work on my own computer algebra system, as I was
+					previously using <a href="http://algebrite.org/">Algebrite</a> (but is only in
+					terms of x). So PAML is a computer algebra system in which the user can derive and
+					intergrate variables that the users want. After a while, the system went from a
+					supplementary library to the main focus of the project. I got the basics to work,
+					using a parse tree to understand the input of the user. But a big problem arose,
+					moving around parts of the equation become difficult the larger and more complex
+					the equation became; plus the tree would lean towards one side and fill the rest
+					to the other side at the very bottom of the tree or the second to last thing of the
+					tree.
+				</p>
+				
+				<p class="description">
+					To remedy this, I came up with a system that chops up parts of the equation into a
+					list of "buckets" and those buckets have their own parse tree. Each bucket is marked
+					by a <code>+</code> or <code>-</code>. So the equation: 1 + sin(x - 3) ^ 2 - (1 - x);
+					would be split into three buckets: <code>+ 1</code>, <code>+ sin(x - 3) ^ 2</code>,
+					and <code>- (1 - x)</code>. And anything in parenthesis would be a sub equation and
+					would follow the same rules, so <code>x - 3</code> would be split into <code>+ x</code>
+					and <code>- 3</code>. This makes it easier to move around parts of the equation
+					algebraically. So <code>1 + sin(x - 3) ^ 2 - (1 - x)</code> moving around to
+					<code>sin(x - 3) ^ 2 - (1 - x) + 1</code> would O(1) as it just moves from index 0
+					to index 2. I do notice that this might increase space complexity. After 6 months, I
+					had to rework how it works and ended up shelving this project for later; so that
+					when I am prepared, I will plan out how it should work and then work on it. I was
+					able to derive and evaluate with it, so I was able to graph 3D functions with it.
+					Any applications and images of that were however on an old broken hard drive, so
+					I unfortunately don't have any images for this project.
+				</p>
 			</div>
 			
 			<div class="project">
