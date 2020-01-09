@@ -92,15 +92,148 @@
 			</div>
 			
 			<div class="project">
+				
+				<a name="youtube-bot"><h2>YouTube Video Bot</h2></a>
+				
+				<p class="description">
+					This was an idea I had one day of wanting to make a YouTube channel, but put as little
+					effort into editting as possible. The idea is that I create a bunch of scripts for the
+					bot to read and it creates YouTube videos out of it every day I turn on my computer.
+					I made it in C#.
+					I named the bot after Alan Turing and Ada Lovelace and it's full name is Henry-Alan
+					Lovelace (to get the acronym H.A.L.). I couldn't get
+					<a href="https://www.ffmpeg.org/">FFMPEG</a> to work programmically for some reason,
+					so I instead was limited on using some super old API that Microsoft had lying around.
+					It makes some super basic videos (just a blue screen with text), but I spent months
+					getting the text-to-speech voice and text changes to sync up perfectly. Although
+					the antiquated API being used can sometimes desync the audio and video.
+				</p>
+				
+				<p class="description">
+					The scripts that the robot would be fairly simple, such as the following below:
+				</p>
+				<div class="code-preview">
+					<pre class="preview-file-name">channel_intro.package.json</pre>
+					<pre class="preview">
+  {
+    "id": "channel_intro",
+    "videoName": "channel_intro.wmv",
+    "videoDescPackage": "channel_intro.desc.json",
+    "refScripts": ["DefaultVideoScript.cs"],
+    "properties": {
+      "documentFile": "input/channel_intro.txt"
+    }
+  }					</pre>
+				</div>
+				
+				<div class="code-preview">
+					
+					<pre class="preview-file-name">channel_intro.desc.json</pre>
+					
+					<pre class="preview">
+{
+	"title": "Channel Introduction",
+	"desc": "Hello World! This is the introduction to my YouTube channel! Hope you guys like it ^_^",
+	"privacy": "public",
+	"category": "educational",
+	"tags": ["channel", "introduction", "is", "there", "really", "something", "to", "say", "here?"]
+}					</pre>
+				
+				</div>
+				
+				<div class="code-preview">
+					
+					<pre class="preview-file-name">channel_intro.txt</pre>
+					
+					<pre class="preview">
+Hello World! My name is Henry-Alan Lovelace. But you can call me Alan for short.
+This is an introduction to my YouTube channel. This is where I would place opinion pieces (like game
+design tips and tricks) and memes [airhorn] and such. Unfortunately, the creation of content has been delayed
+for roughly half a year due to the lack of my writer's ability to place his thoughts into
+words and therefore into video. Plus his lack of material.
+[img|src=assets/shrug.png|len=00:00:01|anchor=middle]
+But he is still working on it and hopefully this channel will actually post regularly.</pre>
+					<!--end pre-->
+				</div>
+				
+				<p class="description">
+					The first file contains all the relavent files needed to create a video. This
+					includes the name of the file, special C# scripts that help render effects
+					programmed within the script, specifics about the YouTube video, and the
+					text to render into the video. I made it open ended so I don't have to make
+					much work on the backend and be able to use it from the front end.
+				</p>
+				
+				<p class="description">
+					The second file contains all the information necessary for YouTube. This
+					includes the name of the video, the description underneath the video,
+					the tags, the category, and whether or not the video is private, public,
+					or unlisted. The tags are used to create a
+					<a href="products.html#clickbait-generator">clickbaity thumbnail</a>, if I
+					remember correctly, there should be a way to set the thumbnail manually.
+					However, I stopped working on the project before I was able to integrate
+					the thumbnail into the video.
+				</p>
+				
+				<p class="description">
+					The last file contains all the information for the bot to create a video
+					from. If you notice there are these weird command blocks that I make the
+					bot parse: <code>[airhorn]</code> and
+					<code>[img|src=assets/shrug.png|len=00:00:01|anchor=middle]</code>.
+					Airhorn is the more simplified version of the commands. It's a preprogrammed
+					version of two commands, an image and sound command, that shows an airhorn
+					in the middle of the screen and plays the sound of an airhorn. The second
+					command is a bit more complicated. The entire command contains no space, this
+					is intential. I did not want to take the time to design a language for it to
+					read, I just wanted the quick way of parsing each word by spaces, tabs, and
+					new lines. So if I needed a command that writes text on the screen, then I
+					would substitute <code>_</code> for an actual space. Since this was a private
+					product, I didn't care that this was a hacky way of creating effects. Each
+					parameter of the attribute is separated by <code>|</code>. Each command has
+					it's own set of parameters, but the basic structure of assigning a parameter
+					is <code>&lt;param_name&gt;=&lt;value&gt;</code>.
+				</p>
+				
+				<p class="description">
+					These three files the bot would create a YouTube video, as shown below in the Videos
+					section. The bot had it's own email, in which I would zip up these files and email
+					them to the bot. Every time I would turn on my computer, it would automatically run
+					the bot, and it would read it's emails (deleting irrelevant emails and downloads data
+					from relavent ones), pick a random script to make a video (if it's a new day and it
+					hasn't made a video that day), create a video, upload the video, and post to Twitter
+					that the video is up on YouTube. The point of it was to make me only worry about
+					creating the scripts, and I can make a ton of scripts; the bot will take care of the
+					rest making sure it doesn't spam.
+				</p>
+				
+				<h3>Videos</h3>
+				
+				<div class="project-videos">
+					<iframe
+						width="560"
+						height="315"
+						src="https://www.youtube.com/embed/eFAxJLNpYE8"
+						frameborder="0"
+						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen
+					></iframe>
+				</div>
+				
+				<h3>Links</h3>
+				
+				<ul class="project-links">
+					<li><a href="https://www.youtube.com/watch?v=eFAxJLNpYE8">The channel introduction video of the bot</a></li>
+					<li><a href="https://www.youtube.com/channel/UCKMX0pPtlD127Jhzu55gFyA">The channel of the bot</a></li>
+				</ul>
+				
+			</div>
+			
+			<div class="project">
 				<a name="asteroid-shooter"><h2>Asteroid Shooter (VR)</h2></a>
 			</div>
 			
 			<div class="project">
 				<a name="go-me-go"><h2>GoMeGo</h2></a>
-			</div>
-			
-			<div class="project">
-				<a name="youtube-bot"><h2>YouTube Video Bot</h2></a>
 			</div>
 			
 			<div class="project">

@@ -12,6 +12,29 @@ body {
 	background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
 }
 
+.code-preview {
+	margin: 16px 0px;
+}
+
+pre.preview, pre.preview-file-name {
+	display: block;
+	width: 90%;
+	margin: 0px auto;
+	background-color: white;
+	border: #444 1px solid;
+	border-radius: 0px;
+	padding: 8px 8px;
+	color: #555;
+	word-wrap: break-word;
+	overflow: auto;
+}
+
+pre.preview-file-name {
+	padding: 4px 8px;
+	border-bottom: none;
+	color: #101820;
+}
+
 kbd {
 	background-color: #777;
 	padding: 0px 4px;
@@ -79,6 +102,10 @@ kbd {
 .content a {
 	color: #4a4;
 	text-decoration: none;
+}
+
+.content a:hover {
+	color: #282;
 }
 
 .content img {
