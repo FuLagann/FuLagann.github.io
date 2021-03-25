@@ -1,0 +1,24 @@
+
+body { background-color: lightcyan; }
+
+.page {
+	display: grid;
+	grid-template-areas: "side main";
+	grid-template-columns: 25% 75%;
+	min-height: 100vh;
+	
+	.main-content {
+		grid-area: main;
+		height: 120vh;
+	}
+	
+	.side-content {
+		background-color: paleturquoise;
+		background: linear-gradient(289deg, paleturquoise, lightblue);
+		position: fixed;
+		top: 0;
+		width: 25%;
+		height: 100vh;
+		overflow-y: auto;
+	}
+}

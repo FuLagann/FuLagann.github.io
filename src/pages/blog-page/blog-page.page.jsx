@@ -1,11 +1,11 @@
 
 import BasePage from "../base-page/base-page.page";
 import XmlReader from "../../components/xml-reader/xml-reader.component";
-import "./landing-page.styles.scss";
+import "./blog-page.styles.scss";
 
-export default class LandingPage extends BasePage {
+export default class BlogPage extends BasePage {
 	renderMainContent(props) {
-		console.log(props.match.params);
+		console.log(props);
 		return (
 			<div className="content-container">
 				<XmlReader
