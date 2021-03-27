@@ -1,24 +1,41 @@
 
-body { background-color: lightcyan; }
+$sidebar-background: #5bf;
+$body-background: #eef;
+
+body { background-color: $body-background; }
 
 .page {
 	display: grid;
 	grid-template-areas: "side main";
-	grid-template-columns: 25% 75%;
+	grid-template-columns: 15% 85%;
 	min-height: 100vh;
 	
 	.main-content {
 		grid-area: main;
-		height: 120vh;
+		
+		.content-container {
+			padding: 2em;
+		}
 	}
 	
 	.side-content {
-		background-color: paleturquoise;
-		background: linear-gradient(289deg, paleturquoise, lightblue);
+		background-color: $sidebar-background;
+		//background: linear-gradient(289deg, $sidebar-background, lightblue);
 		position: fixed;
 		top: 0;
-		width: 25%;
-		height: 100vh;
+		width: calc(15% - 16px);
+		height: calc(100vh - 16px);
 		overflow-y: auto;
+		padding: 8px;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	.page {
+		grid-template-columns: 25% 75%;
+		
+		.side-content {
+			width: calc(25% - 16px);
+		}
 	}
 }

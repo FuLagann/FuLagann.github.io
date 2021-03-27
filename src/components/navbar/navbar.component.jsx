@@ -1,6 +1,7 @@
 
 import React from "react";
 import NavbarItem from "../navbar-item/navbar-item.component";
+import "./navbar.styles.scss";
 
 export default class Navbar extends React.Component {
 	constructor() {
@@ -20,9 +21,19 @@ export default class Navbar extends React.Component {
 						{
 							id: "blog-march-2021",
 							name: "March 2021",
-							dir: "/blog/march-2021/week-1"
+							dir: "/blog/march-2021/week-1",
+						},
+						{
+							id: "blog-april-2021",
+							name: "April 2021",
+							dir: "/blog/april-2021/week-2",
 						}
 					]
+				},
+				{
+					id: "projects",
+					name: "Projects",
+					dir: "/projects"
 				},
 				{
 					id: "contact",
@@ -39,6 +50,7 @@ export default class Navbar extends React.Component {
 				<ul>
 					{this.state.navItems.map(val => <NavbarItem {...val}/>)}
 				</ul>
+				<div className="clear-both"></div>
 			</nav>
 		);
 	}

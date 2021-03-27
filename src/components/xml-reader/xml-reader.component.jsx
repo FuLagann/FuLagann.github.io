@@ -3,7 +3,7 @@ import axios from "axios";
 import React from "react";
 
 export default class XmlReader extends React.Component {
-	hasStartedRead = false;
+	pageLocation = "";
 	
 	readXml(monthYear, week) {
 		axios.get(`/${monthYear}.blogcontent.html`).then(res => {
@@ -15,11 +15,23 @@ export default class XmlReader extends React.Component {
 			this.setState({ content: null });
 		});
 	}
+	
+	hasPageChanged(state) {
+		if(this.state == null) {
+			return true;
+		}
+		if(this.pageLocation === "") {
+			return true;
+		}
+		return (state.location.pathname !== this.pageLocation);
+	}
+	
 	render() {
-		if(this.hasStartedRead === false) {
-			console.log(this.props);
+		if(this.hasPageChanged(this.state)) {
+			if(this.state != null && this.state.location != null) {
+				this.pageLocation = this.state.location.pathname;
+			}
 			this.readXml(this.props.monthYear, this.props.week);
-			this.hasStartedRead = true;
 		}
 		if(this.state?.content == null) {
 			return (<div></div>);
