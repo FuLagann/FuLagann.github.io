@@ -1,0 +1,32 @@
+{
+	"metadata": {
+		"upvotes": 2
+	},
+	"details": {
+		"name": "Project #1",
+		"tags": ["testing", "project", "number one", "c#"],
+		"short_description": "This is just a short description of the project",
+		"long_description": "This is a more detailed and long description of the project. Alternatively starting it with a filename will just import in that file instead."
+	},
+	"visuals": {
+		"type": "images",
+		"images": [
+			{
+				"path": "image-1.png",
+				"alt": "This is the first example image",
+				"show_in_small_view": true
+			},
+			{
+				"path": "image-2.png",
+				"alt": "This is the second example image",
+				"show_in_small_view": false
+			},
+			{
+				"path": "images-3.png",
+				"alt": "This is the last example image",
+				"show_in_small_view": true
+			}
+		],
+		"images_layout": "carousel"
+	}
+}

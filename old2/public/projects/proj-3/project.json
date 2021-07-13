@@ -1,0 +1,29 @@
+{
+	"metadata": {
+		"upvotes": 4
+	},
+	"details": {
+		"name": "Project #3",
+		"tags": ["testing", "project"],
+		"short_description": "quick-readme.md",
+		"long_description": "readme.html"
+	},
+	"visuals": {
+		"type": "images",
+		"images": [
+			{
+				"path": "image-1.png",
+				"alt": "testing"
+			},
+			{
+				"path": "image-2.png",
+				"alt": "also testing"
+			}
+		],
+		"images_layout": "stacked",
+		"logo": {
+			"path": "logo-icon.jpg",
+			"alt": "icon of project #3"
+		}
+	}
+}
