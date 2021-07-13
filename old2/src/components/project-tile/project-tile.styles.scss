@@ -1,0 +1,19 @@
+
+.projects .project,
+.projects .project-details,
+.projects .related-details {
+	width: 98%;
+	padding: 16px 2%;
+	margin-bottom: 8px;
+	background: #eef;
+	color: black;
+	border: 1px black solid;
+}
+
+img.project-logo {
+	width: 32px;
+	height: 32px;
+	display: inline;
+	margin-right: 20px;
+	vertical-align: middle;
+}

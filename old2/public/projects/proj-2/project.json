@@ -1,0 +1,9 @@
+{
+	"details": {
+		"name": "Project #2",
+		"tags": ["testing", "project", "number two", "c++"],
+		"short_description": "Blah blah blah",
+		"long_description": "readme.md"
+	},
+	"visuals": {}
+}
